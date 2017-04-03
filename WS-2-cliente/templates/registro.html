@@ -23,12 +23,13 @@
             var usuario = $('#txtUsuario').val();
             var contrasena = $('#txtContrasena').val();
             $.ajax({
+                "async":true,
+                "crossDomain":true,
                 url: 'http://127.0.0.1:8000/registro',
                 data: $('form').serialize(),
                 type: 'POST',
                 success: function (response) {
                     console.log(response);
-                alert('Usuario registrado')
                 },
                 error: function (error) {
                     console.log(error);
