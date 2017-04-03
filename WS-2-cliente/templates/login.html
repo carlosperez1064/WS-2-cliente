@@ -3,31 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <title>VIAJANDO</title>
+    <title>VIAJANDO LOGIN</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-<form class="form-registro" action="/formulario" method="post" role="form">
-    <h2>Registro</h2>
-    <input type="email" name="usuario" class="form-control" placeholder="Correo" required autofocus>
-    <input type="password" name="contrasena" class="form-control" placeholder="Contrasena" required>
+<form class="form-registro" action="/login" method="post" role="form">
+    <h2>LOGIN</h2>
+    <input type="text" name="user" class="form-control" placeholder="Correo" required autofocus>
+    <input type="password" name="pass" class="form-control" placeholder="Contrasena" required>
 
-    <button type="button">Registrarme</button>
-    <input type="button" OnClick= "location.href = 'login'" value="LOGIN">
+    <button type="button">Ingresar</button>
+    <input type="button" OnClick= "location.href = 'consultas'" value="CONSULTAR">
+
 
 </form>
 
 <script type=text/javascript>
     $(function () {
         $('button').click(function () {
-            var usuario = $('#txtUsuario').val();
-            var contrasena = $('#txtContrasena').val();
+            var user = $('#txtUser').val();
+            var pass = $('#txtPass').val();
             $.ajax({
                 "async":true,
                 "crossDomain":true,
-                url: 'http://127.0.0.1:8000/registro',
+                url: 'http://127.0.0.1:8000/login',
                 data: $('form').serialize(),
                 type: 'POST',
                 success: function (response) {

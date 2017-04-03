@@ -16,6 +16,12 @@ def formulario():
     print("Si")
     return render_template('registro.html')
 
+# ---------------------------------------------- MOSTRAR FORMULARIO LOGIN ----------------------------------------------#
+@app.route('/login')
+def login():
+    print("Si")
+    return render_template('login.html')
+
 # ------------------------------------------ MOSTRAR HTML PARA CONSULTAS -----------------------------------------------#
 @app.route('/consultas')
 def consultas():
