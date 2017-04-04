@@ -6,10 +6,6 @@ __author__ = 'Carlos Perez', 'Diana Camacho', 'Hillary Brenes'
 
 app = Flask(__name__)
 
-@app.route('/test')
-def test():
-    return "Hola"
-
 # ------------------------------------------------ MOSTRAR FORMULARIO --------------------------------------------------#
 @app.route('/formulario')
 def formulario():
