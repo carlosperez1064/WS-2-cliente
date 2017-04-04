@@ -27,6 +27,11 @@ def login():
 def consultas():
     return render_template('consultas.html')
 
+# ---------------------------------------- MOSTRAR HTML PARA RESERVACIONES ---------------------------------------------#
+@app.route('/reservar')
+def reservar():
+    return render_template('reservacion.html')
+
 # ----------------------------------------------------- EJECUCIÓN ------------------------------------------------------#
 if __name__ == '__main__':
-    app.run(port=5000, host='127.0.0.1')
+    app.run(port=8000, host='127.0.0.1')

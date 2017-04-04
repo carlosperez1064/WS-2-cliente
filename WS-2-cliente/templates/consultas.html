@@ -11,10 +11,10 @@
 
 <form class="form-consultas" action="/consultas" method="post" role="form">
     <h2>Consulte por su ruta</h2>
-    <input type="text" name="origen" class="form-control" placeholder="Punto de Origen" required autofocus>
-    <input type="text" name="destino" class="form-control" placeholder="Punto de Destino" required autofocus>
-    <input type="text" name="tipoTransporte" class="form-control" placeholder="Tipo de Transporte" required autofocus>
-    <button type="button">Consultar</button>
+    <input name="origen" class="form-control" placeholder="Punto de Origen" required autofocus>
+    <input name="destino" class="form-control" placeholder="Punto de Destino" required autofocus>
+    <input name="tipoTransporte" class="form-control" placeholder="Tipo de Transporte" required autofocus>
+    <button>Consultar</button>
 </form>
 
 <script type=text/javascript>
@@ -24,7 +24,7 @@
             var destino = $('#txtDestino').val();
             var tipoTransporte = $('#txtTipoTransporte').val();
             $.ajax({
-                url: 'http://127.0.0.1:8000/viajando/consultas',
+                url: 'http://127.0.0.1:5000/viajando/consultas',
                 data: $('form').serialize(),
                 type: 'POST',
                 success: function (response) {

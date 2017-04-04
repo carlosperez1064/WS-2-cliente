@@ -14,8 +14,8 @@
     <input type="email" name="usuario" class="form-control" placeholder="Correo" required autofocus>
     <input type="password" name="contrasena" class="form-control" placeholder="Contrasena" required>
 
-    <button type="button">Registrarme</button>
-    <input type="button" OnClick= "location.href = 'login'" value="LOGIN">
+    <button>Registrarme</button>
+    <input OnClick= "location.href = 'login'" value="LOGIN">
 
 </form>
 
@@ -27,7 +27,7 @@
             $.ajax({
                 "async":true,
                 "crossDomain":true,
-                url: 'http://127.0.0.1:8000/registro',
+                url: 'http://127.0.0.1:5000/registro',
                 data: $('form').serialize(),
                 type: 'POST',
                 success: function (response) {
