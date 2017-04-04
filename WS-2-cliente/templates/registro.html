@@ -11,22 +11,20 @@
 
 <form class="form-registro" action="/formulario" method="post" role="form">
     <h2>Registro</h2>
-    <input type="email" name="usuario" class="form-control" placeholder="Correo" required autofocus>
-    <input type="password" name="contrasena" class="form-control" placeholder="Contrasena" required>
+    <input type="email" name="usuario" placeholder="Correo" required autofocus>
+    <input type="password" name="contrasena" placeholder="Contrasena" required>
 
     <button type="button">Registrarme</button>
     <input type="button" OnClick= "location.href = 'login'" value="LOGIN">
 
 </form>
 
-<script type=text/javascript>
-    $(function () {
+<script>
+    $(document).on('ready',function() {
         $('button').click(function () {
-            var usuario = $('#txtUsuario').val();
-            var contrasena = $('#txtContrasena').val();
+            var usuario = $('#usuario').val();
+            var contrasena = $('#contrasena').val();
             $.ajax({
-                "async":true,
-                "crossDomain":true,
                 url: 'http://127.0.0.1:5000/registro',
                 data: $('form').serialize(),
                 type: 'POST',
