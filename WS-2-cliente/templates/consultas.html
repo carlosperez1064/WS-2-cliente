@@ -20,9 +20,6 @@
 <script type=text/javascript>
     $(document).on('ready',function() {
         $('button').click(function () {
-            var origen = $('#origen').val();
-            var destino = $('#destino').val();
-            var tipoTransporte = $('#txtTipoTransporte').val();
             $.ajax({
                 url: 'http://127.0.0.1:5000/viajando/consultas',
                 data: $('form').serialize(),

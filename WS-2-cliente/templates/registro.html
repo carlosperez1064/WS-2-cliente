@@ -22,8 +22,6 @@
 <script>
     $(document).on('ready',function() {
         $('button').click(function () {
-            var usuario = $('#usuario').val();
-            var contrasena = $('#contrasena').val();
             $.ajax({
                 url: 'http://127.0.0.1:5000/registro',
                 data: $('form').serialize(),
